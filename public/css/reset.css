@@ -1,0 +1,12 @@
+*:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+*:active{
+	background-color: none;
+}
+
+textarea:focus,input:focus{
+    border: 1px solid blue !important;
+}

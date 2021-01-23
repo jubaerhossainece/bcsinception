@@ -1,0 +1,44 @@
+*:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+*:active{
+	background-color: none;
+}
+
+.img-header{
+	height: 40px;
+}
+
+.pcoded-header .dropdown .profile-notification .pro-head{
+	display: flex;
+}
+
+.pro-sidebar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.pro-sidebar .pro-head-name {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.2rem;
+}
+
+.pro-sidebar .pro-head-name h6{
+	margin-bottom: 0;
+}
+
+.pcoded-navbar .pcoded-inner-navbar li.profile{
+    border-bottom: 2px solid lightgray;
+}
+
+.badge{
+    padding: 0.3rem;
+    font-size: 12px;
+}
