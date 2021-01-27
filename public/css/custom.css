@@ -42,3 +42,330 @@
     padding: 0.3rem;
     font-size: 12px;
 }
+
+.btn > i {
+    margin-right: 3px;
+}
+
+*:focus {
+    outline: 0 !important;
+    box-shadow: none !important;
+}
+
+*:active{
+    background-color: none;
+}
+
+textarea:focus,input:focus{
+    border: 1px solid blue !important;
+}
+
+p{
+    margin-bottom: 0.4rem;
+}
+
+.dropdown-item{
+    cursor: pointer;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+    color: #fff;
+    border-color: #5f0ad0;
+    background-color: #5f0ad0;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before{
+    background-color: #5f0ad0;
+}
+
+body{
+    background-color: #f1f4f6;
+}
+
+.text-danger {
+    padding: 4px 0 0 0px;
+}
+
+.h4-bold{
+    font-weight: 600;
+    color: rgba(13,27,62,0.7);
+}
+
+label.light {
+    font-weight: 200 !important;
+}
+
+.alert{
+    padding: 0.5rem 0.75rem;
+    margin-top: 10px !important;
+}
+
+.row {
+    justify-content: center;
+    display: flex;
+ }
+
+ .show-card label{
+    font-weight: 600;
+ }
+
+ label {
+    margin-bottom: 0.2rem !important;
+    color: #495057!important;
+    font-weight: 600!important;
+    font-size: 14px!important;
+}
+
+.login.form-check-input {
+    position: absolute;
+    margin-top: .4rem;
+    margin-left: -1.25rem;
+}
+
+.form-check, .form-group {
+    margin-bottom: 1rem;
+    padding: 0;
+}
+
+.form-group:last-child{
+    margin-bottom: 0 !important;
+}
+
+.form-control {
+    font-size: 13px;
+    border-color: #d1d3d6;
+    padding: .55rem 0.6rem;
+}
+
+.main-panel .page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -ms-justify-content: space-between;
+    margin-bottom: 20px;
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 5px;
+}
+
+.card{
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px 1px #e3e3e4;
+}
+
+.card .card-header {
+    padding: 1rem 1.25rem;
+    background-color: transparent;
+    border-bottom: 1px solid #e0e3e6 !important;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-header .card-title {
+    color: rgba(13,27,62,0.7);
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    display: inline-block;
+}
+
+.card-header h1,h2,h3,h4,h5,h6{
+    margin-bottom: 0;
+}
+
+.btn {
+    padding: 6px 9px;
+    font-size: 15px;
+    margin-bottom: 0px; 
+    margin-right: 0px; 
+    transition: all 0.3s ease-in-out;
+    position: relative;
+    font-weight: 600;
+    border-radius: 3px;
+  /*  transition: color 0.15s ease 0s, background-color 0.15s ease 0s, 
+    border-color 0.15s ease 0s, box-shadow 0.15s ease 0s;*/
+}
+
+.btn-sm{
+    padding: 0.17rem 0.45rem;
+    font-weight: 300;
+}
+
+.btn-secondary{
+    background-color: #9ca2ad;
+    border-color: #9ca2ad;
+}
+
+.btn-secondary:hover{
+    background-color: #80848e;
+    border-color: #80848e;
+}
+
+.btn-secondary:active{
+    background-color: #80848e !important;
+    border-color: #80848e !important;
+}
+
+.btn-primary {
+    color: rgb(255, 255, 255);
+    background-color: #5e72e4;
+    border-color: #5e72e4;
+}
+
+.btn-primary:hover{
+    background-color: #324cdd;
+    border-color: #324cdd;
+}
+
+.btn-primary:active{
+    background-color: #324cdd !important;
+    border-color: #324cdd !important;
+}
+
+.btn-primary:focus{
+    background-color: #324cdd !important;
+    border-color: #324cdd !important;
+}
+
+.btn-violet{
+    background-color: #5f0ad0;
+    border-color: #5f0ad0;
+    color: white;
+}
+
+.btn-violet:hover{
+    background-color: #420690;
+    border-color: #420690;
+    color: white;
+}
+
+.item-list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.badge{
+    color: white;
+}
+
+.search:focus{
+    border: none !important;
+}
+
+
+/*Custom styles for bootstrap 4 Datatables*/
+.page-item.active .page-link {
+    z-index: 3;
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.dataTables_wrapper.container-fluid{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.dataTables_wrapper .dataTables_length{
+    padding-top: 1rem;
+    padding-left: 1rem;
+}
+
+.dataTables_wrapper .dataTables_filter{
+    padding-top: 1rem;
+    padding-right: 1rem;
+}
+
+.dataTables_wrapper .dataTables_info{
+    padding-left: 1rem;
+    padding-bottom: 1rem;
+}
+
+.dataTables_wrapper .dataTables_paginate{
+    padding-right: 1rem;
+}
+/*.pagination > li > a, .pagination > li > span, 
+{
+    border-radius: 0 !important; 
+    margin: 0 0; 
+}
+.pagination > li:first-child > a, .pagination > li:first-child > span{
+    border-radius: 3px 0 0 3px !important;
+} 
+.pagination > li:last-child > a, 
+.pagination > li:last-child > span{
+    border-radius: 0 3px 3px 0 !important;
+}*/
+
+/*toastr style customization*/
+#toast-container > div {
+    transition: 0.9s;
+}
+#toast-container > div:hover {
+  -moz-box-shadow: 0 0 21px #575758;
+  -webkit-box-shadow: 0 0 21px #575758;
+  box-shadow: 0 0 21px #575758;
+  opacity: 0.8;
+  -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  filter: alpha(opacity=80);
+  cursor: pointer;
+}
+
+/*izitoast css style customization*/
+.iziToast{
+    max-width: 22rem;
+}
+
+.iziToast > .iziToast-body .iziToast-texts strong{
+    display: block;
+    float: none;
+    padding-bottom: 10px;
+}
+
+.iziToast > .iziToast-body .iziToast-title{
+    color: #3a3a3c;
+}
+
+.iziToast.iziToast-color-green{
+    background: rgb(37 183 74 / 90%);
+    border-color: rgb(37 183 74 / 90%);
+}
+
+.iziToast.iziToast-color-orange{
+    background: #ffb300e0;
+    border-color: #ffb300e0;
+}
+
+.iziToast.iziToast-color-red {
+    background: #eb2f06bf;
+    border-color: #eb2f06bf;
+}
+
+/*notification dropdown and user rpofile dropdown*/
+.navbar-expand-lg .navbar-nav .dropdown-menu {
+    left: auto;
+    right: 0;
+    border-radius: 0 0 4px 4px;
+}
+
+/*dropdown active color*/
+.dropdown-item.active, .dropdown-item:active {
+    background-color: #324cdd;
+}
+
+.pcoded-main-container .page-header {
+    margin-bottom: 30px;
+    background-color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0px 0px 20px 1px #e3e3e4;
+}
+
+.page-title{
+    color: #495057 !important;
+}

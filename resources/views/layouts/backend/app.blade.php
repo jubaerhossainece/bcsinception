@@ -36,11 +36,11 @@
 
 <body class="">
 	<!-- [ Pre-loader ] start -->
-	<div class="loader-bg">
+	<!-- <div class="loader-bg">
 		<div class="loader-track">
 			<div class="loader-fill"></div>
 		</div>
-	</div>
+	</div> -->
 	<!-- [ Pre-loader ] End -->
  	@include('layouts.backend.includes.sidebar')
 

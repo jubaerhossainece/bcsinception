@@ -6,7 +6,11 @@ use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
 use App\Http\Controllers\Controller;
 use App\Models\User;
+use App\Models\Role;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 
 class UserController extends Controller
 {
@@ -17,7 +21,9 @@ class UserController extends Controller
      */
     public function index()
     {
+        Gate::authorize('app.users.index');
         // $users = DB::table('users')->get();
+        
         $users = User::all();
         return view('backend.users.index', compact('users'));
     }
@@ -29,7 +35,9 @@ class UserController extends Controller
      */
     public function create()
     {
-        //
+        Gate::authorize('app.users.create');
+        $roles = Role::all();
+        return view('backend.users.form', compact('roles'));
     }
 
     /**
@@ -40,7 +48,13 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+            'name' => 'requred|string',
+            'email' => 'required|email|unique:users,email',
+            'password' => 'required|min:8|string',
+            'role' => 'integer',
+            'image' => 'nullable'
+        ]);
     }
 
     /**
