@@ -4,6 +4,9 @@ namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Gate;
+use App\Models\Question;
+use Illuminate\Support\Facades\DB;
 
 class QuestionController extends Controller
 {
@@ -14,7 +17,9 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        //
+        Gate::authorize('app.questions.index');
+        $questions = DB::table('questions')->get();
+        return view('backend.questions.index', compact('questions'));
     }
 
     /**

@@ -47,14 +47,14 @@
     margin-right: 3px;
 }
 
-*:focus {
+/**:focus {
     outline: 0 !important;
     box-shadow: none !important;
 }
 
 *:active{
     background-color: none;
-}
+}*/
 
 textarea:focus,input:focus{
     border: 1px solid blue !important;
@@ -368,4 +368,39 @@ label.light {
 
 .page-title{
     color: #495057 !important;
+}
+
+.pcoded-header .dropdown .dropdown-toggle{
+    text-decoration: none;
+}
+
+
+/*Questions page style*/
+.question-answer-section{
+    padding: 2rem 3rem;
+}
+
+.question-answer{
+    margin-bottom: 2rem;
+}
+
+
+.question strong{
+    font-size: 16px;
+    font-weight: 600;
+    color: #323238;
+}
+
+.option{
+    font-size: 14px;
+
+}
+
+.explanation{
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.explanation strong{
+    font-weight: 600;
 }

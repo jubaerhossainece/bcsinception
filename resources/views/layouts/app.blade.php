@@ -16,16 +16,28 @@
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
 
-    <!-- Styles -->
-    <link href="{{ asset('css/app.css') }}" rel="stylesheet">
-    <link href="{{ asset('css/reset.css') }}" rel="stylesheet">
+
+    <!-- Favicon icon -->
+    <link rel="icon" href="{{url('assets/images/favicon.ico')}}" type="image/x-icon">
+    <!-- fontawesome icon -->
+    <link rel="stylesheet" href="{{url('assets/fonts/fontawesome/css/fontawesome-all.min.css')}}">
+    <!-- animation css -->
+    <link rel="stylesheet" href="{{url('assets/plugins/animation/css/animate.min.css')}}">
+
+    <!-- vendor css -->
+    <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
+
+    <!-- styles -->
+<!--     <link rel="stylesheet" href="{{url('/css/custom.css')}}"> -->
+
+
 </head>
 <body>
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Laravel') }}
+                    {{ config('app.name', 'Inception') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

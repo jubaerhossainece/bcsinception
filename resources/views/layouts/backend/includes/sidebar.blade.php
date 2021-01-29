@@ -4,8 +4,8 @@
 		<div class="navbar-wrapper ">
 			<div class="navbar-brand header-logo">
 				<a href="index.html" class="b-brand">
-					<img src="../assets/images/logo.svg" alt="" class="logo images">
-					<img src="../assets/images/logo-icon.svg" alt="" class="logo-thumb images">
+					<img src="{{url('assets/images/logo.svg')}}" alt="" class="logo images">
+					<img src="{{url('assets/images/logo-icon.svg')}}" alt="" class="logo-thumb images">
 				</a>
 				<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
 			</div>
@@ -27,20 +27,26 @@
 						<a href="{{route('app.dashboard')}}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Dashboard</span></a>
 					</li>
 					<li class="nav-item">
-						<a href="{{('')}}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Questions</span></a>
+						<a href="{{route('app.questions.index')}}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-home"></i></span><span class="pcoded-mtext">Questions</span></a>
 					</li>
+					@can('app.users.index')
 					<li class="nav-item">
 						<a href="{{route('app.users.index')}}" class="nav-link"><span class="pcoded-micon"><i class="fas fa-users"></i></span><span class="pcoded-mtext">
 						Users</span></a>
 					</li>
+					@endcan
+					@can('app.roles.index')
 					<li class="nav-item">
 						<a href="{{route('app.roles.index')}}" class="nav-link"><span class="pcoded-micon"><i class="fas fa-users"></i></span><span class="pcoded-mtext">
 						Roles</span></a>
 					</li>
+					@endcan
+					@can('app.permissions.index')
 					<li class="nav-item">
 						<a href="{{route('app.permissions.index')}}" class="nav-link"><span class="pcoded-micon"><i class="fas fa-users"></i></span><span class="pcoded-mtext">
 						Permissions</span></a>
 					</li>
+					@endcan
 					<li class="nav-item pcoded-menu-caption">
 						<label>UI Element</label>
 					</li>

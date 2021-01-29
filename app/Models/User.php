@@ -47,7 +47,7 @@ class User extends Authenticatable
          if($this->role->permissions()->where('slug', $permission)->first()){
             return true;
          } else{
-            dd('hello');
+           
          }
     }
 }

@@ -22,7 +22,7 @@ File: style.css
       Custom css start
 ==========================  **/
 body {
-    font-family: "Mada", sans-serif;
+    font-family: sans-serif;
     font-size: 14px;
     color: #686c71;
     font-weight: 400;
@@ -31,12 +31,16 @@ body {
 }
 
 *:focus {
-    outline: none;
+    outline: 0 !important;
+    box-shadow: none !important;
 }
 
-a:hover {
-    outline: none;
-    text-decoration: none;
+*:active{
+    background-color: none;
+}
+
+textarea:focus,input:focus{
+    border: 1px solid blue !important;
 }
 
 h1,
@@ -80,6 +84,14 @@ p {
 b,
 strong {
     font-weight: 400;
+}
+
+.anchor-link{
+    color: #3949AB !important;
+}
+
+.anchor-link:hover{
+    color: #2f3d8e !important;
 }
 
 .img-radius {
@@ -178,7 +190,7 @@ p.text-muted {
 .card .card-header {
     background-color: transparent;
     border-bottom: 1px solid #e2e5e8;
-    padding: 20px 25px;
+    padding: 8px 20px;
     position: relative;
 }
 
@@ -6302,7 +6314,7 @@ body.layout-1 .pcoded-navbar.active-dark .sidemenu li.active:after {
 .form-control {
     background: #eff3f6;
     padding: 10px 20px;
-    font-size: 14px;
+    font-size: 16px;
     height: auto;
 }
 
@@ -7168,14 +7180,6 @@ table.dataTable tbody > tr.selected td.select-checkbox:after, table.dataTable tb
 /**  =====================
       Button css start
 ==========================  **/
-.btn {
-    padding: 10px 20px;
-    border-radius: 0.25rem;
-    font-size: 14px;
-    margin-bottom: 5px;
-    margin-right: 10px;
-    transition: all 0.3s ease-in-out;
-}
 
 .btn > i {
     margin-right: 12px;

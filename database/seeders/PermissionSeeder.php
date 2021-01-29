@@ -83,5 +83,32 @@ class PermissionSeeder extends Seeder
         	'name' => 'Delete User',
         	'slug' => 'app.users.destroy'
         ]);
+
+        //question management permissions
+        $moduleAppQuestion = Module::updateOrCreate(['name' => 'Question Management']);
+
+        Permission::updateOrCreate([
+            'module_id' => $moduleAppQuestion->id,
+            'name' => 'Access Question',
+            'slug' => 'app.questions.index'
+        ]);
+
+        Permission::updateOrCreate([
+            'module_id' => $moduleAppQuestion->id,
+            'name' => 'Create Question',
+            'slug' => 'app.questions.create'
+        ]);
+
+        Permission::updateOrCreate([
+            'module_id' => $moduleAppQuestion->id,
+            'name' => 'Edit Question',
+            'slug' => 'app.questions.edit'
+        ]);
+
+        Permission::updateOrCreate([
+            'module_id' => $moduleAppQuestion->id,
+            'name' => 'Delete Question',
+            'slug' => 'app.questions.destroy'
+        ]);
     }
 }

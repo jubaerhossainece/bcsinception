@@ -11,6 +11,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Validation\Rule;
 
 class UserController extends Controller
 {
@@ -49,12 +50,14 @@ class UserController extends Controller
     public function store(Request $request)
     {
         $this->validate($request, [
-            'name' => 'requred|string',
-            'email' => 'required|email|unique:users,email',
-            'password' => 'required|min:8|string',
+            'name' => 'required|string',
+            'email' => 'required|email|unique:users,email|max:200',
+            'password' => 'required|min:8|string|confirmed|min:6',
             'role' => 'integer',
-            'image' => 'nullable'
+            'image' => 'nullable|image'
         ]);
+
+
     }
 
     /**
