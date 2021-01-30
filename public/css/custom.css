@@ -6,6 +6,9 @@
 *:active{
 	background-color: none;
 }
+.fixed-button.active{
+    display: none;
+}
 
 .img-header{
 	height: 40px;
@@ -380,6 +383,11 @@ label.light {
     padding: 2rem 3rem;
 }
 
+.question-answer-section p{
+    color: #414246;
+}
+
+
 .question-answer{
     margin-bottom: 2rem;
 }
@@ -394,6 +402,14 @@ label.light {
 .option{
     font-size: 14px;
 
+}
+
+.answer{
+    font-size: 14px;
+}
+
+.answer strong{
+    font-weight: 600;
 }
 
 .explanation{

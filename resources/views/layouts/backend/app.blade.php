@@ -3,7 +3,7 @@
 
 <head>
 
-	<title>Flash Able - Most Trusted Admin Template</title>
+	<title>Inception BCS</title>
 	<!-- HTML5 Shim and Respond.js IE11 support of HTML5 elements and media queries -->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
 	<!--[if lt IE 11]>
@@ -58,11 +58,13 @@
 	</div>
 	<!-- [ Main Content ] end -->
 
-	@stack('script')
 	<!-- Required Js -->
+	<script type="text/javascript" src="{{url('js/app.js')}}"></script>
 	<script src="{{url('assets/js/vendor-all.min.js')}}"></script>
-	<script src="{{url('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script>
+	<!-- <script src="{{url('assets/plugins/bootstrap/js/bootstrap.min.js')}}"></script> -->
 	<script src="{{url('assets/js/pcoded.min.js')}}"></script>
+	<script src="{{url('js/script.js')}}"></script>
+	@stack('script')
 
 </body>
 

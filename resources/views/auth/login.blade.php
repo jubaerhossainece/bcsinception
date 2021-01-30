@@ -40,7 +40,7 @@
                         
                         <div class="text-left mt-2">
                             <div class="checkbox checkbox-primary d-inline">
-                                <input type="checkbox" name="checkbox-fill-1" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                <input type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
 
                                 <label for="remember" class="cr">
                                     {{ __('Remember Me') }}

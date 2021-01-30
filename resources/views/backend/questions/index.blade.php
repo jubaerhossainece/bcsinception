@@ -26,6 +26,9 @@
 					<div class="col-sm-6">
 				  		<p class="option">b)Lorem, ipsum, dolor.</p>
 					</div>
+					<div class="col-sm-12 answer">
+						<p><strong>উত্তরঃ </strong>{{ $question->q_ans}}</p>
+					</div>
 					<div class="col-sm-12 explanation">
 						<p><strong>ব্যাখ্যাঃ </strong>{{ $question->explanation}}</p>
 					</div>
