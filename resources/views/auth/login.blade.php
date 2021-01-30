@@ -5,7 +5,7 @@
 <div class="auth-wrapper">
     <div class="auth-content container">
         <div class="row d-flex justify-content-center">
-            <div class="col-md-8 align-items-center">
+            <div class="col-md-6 align-items-center">
                 <div class="card">
                     <div class="card-header">
                         <h4 class="mb-3 f-w-400">Login into your account</h4>
@@ -13,26 +13,31 @@
                     <div class="card-body">
                         <form method="POST" action="{{ route('login') }}">
                         @csrf
-                        <div class="input-group mb-4">
+                        <div class="form-group">
+                        <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="feather icon-mail"></i></span>
                             </div>
-                            <input type="email" class="form-control" placeholder="Email address"@error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+                            <input type="email" name="email" class="form-control" placeholder="Email address"@error('email') is-invalid @enderror" value="{{ old('email') }}" autocomplete="email" autofocus>
+                        </div>
 
                             @error('email')
-                                <span class="invalid-feedback" role="alert">
+                                <span class="text-danger" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
-                        </div>
-                        <div class="input-group mb-3">
+                    </div>
+
+                        <div class="form-group">
+                        <div class="input-group">
                             <div class="input-group-prepend">
                                 <span class="input-group-text"><i class="feather icon-lock"></i></span>
                             </div>
-                            <input type="password" class="form-control" placeholder="Password"@error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                            <input type="password" name="password" class="form-control" placeholder="Password"@error('password') is-invalid @enderror" name="password" autocomplete="current-password">
+                        </div>
 
                             @error('password')
-                                <span class="invalid-feedback" role="alert">
+                                <span class="text-danger" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                             @enderror
