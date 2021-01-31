@@ -14,12 +14,12 @@
 	<meta name="author" content="Codedthemes" />
 
 	<!-- Favicon icon -->
+	<link rel="stylesheet" href="{{url('/css/app.css')}}">
 	<link rel="icon" href="{{url('assets/images/favicon.ico')}}" type="image/x-icon">
 	<!-- fontawesome icon -->
 	<link rel="stylesheet" href="{{url('assets/fonts/fontawesome/css/fontawesome-all.min.css')}}">
 	<!-- animation css -->
 	<link rel="stylesheet" href="{{url('assets/plugins/animation/css/animate.min.css')}}">
-	<link rel="stylesheet" href="{{url('/css/app.css')}}">
 	@stack('css')
 	<!-- vendor css -->
 	<link rel="stylesheet" href="{{url('assets/css/style.css')}}">
@@ -53,7 +53,9 @@
 	<!-- [ Main Content ] end -->
 
 	<!-- Required Js -->
-	<script type="text/javascript" src="{{url('js/app.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.6.0/umd/popper.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
 	<script src="{{url('assets/js/vendor-all.min.js')}}"></script>
 	
 	<script src="{{url('assets/js/pcoded.min.js')}}"></script>
