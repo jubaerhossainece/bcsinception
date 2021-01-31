@@ -20,7 +20,7 @@ class RoleController extends Controller
     public function index()
     {
         Gate::authorize('app.roles.index');
-        $roles = Role::all();
+        $roles = Role::with('permissions')->get();
         return view('backend.roles.index', compact('roles'));
     }
 
@@ -99,6 +99,12 @@ class RoleController extends Controller
             'name' => ['required', 'string', Rule::unique('roles')->ignore($role->id)],
             'slug' => Str::slug($request->name),
         ]);
+
+        $role->update([
+            'name' => $request->name,
+            'slug' => Str::slug($request->name)
+        ]);
+
 
         $role->permissions()->sync($request->input('permissions'));
 
