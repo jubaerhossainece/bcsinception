@@ -60,7 +60,7 @@
 }*/
 
 textarea:focus,input:focus{
-    border: 1px solid blue !important;
+    border: 1px solid #5e72e4 !important;
 }
 
 p{
@@ -232,18 +232,6 @@ label.light {
     border-color: #324cdd !important;
 }
 
-.btn-violet{
-    background-color: #5f0ad0;
-    border-color: #5f0ad0;
-    color: white;
-}
-
-.btn-violet:hover{
-    background-color: #420690;
-    border-color: #420690;
-    color: white;
-}
-
 .item-list{
     display: flex;
     flex-direction: row;
@@ -290,6 +278,18 @@ label.light {
 .dataTables_wrapper .dataTables_paginate{
     padding-right: 1rem;
 }
+/*end datatables design*/
+
+.page-item.active .page-link{
+    background-color: #5e72e4;
+    border-color: #5e72e4;
+}
+
+.page-item.active .page-link:hover{
+    background-color: #324cdd;
+    border-color: #324cdd;
+}
+
 /*.pagination > li > a, .pagination > li > span, 
 {
     border-radius: 0 !important; 
@@ -419,4 +419,37 @@ label.light {
 
 .explanation strong{
     font-weight: 600;
+}
+
+/*select2 style customization*/
+.select2-container {
+    height: -moz-calc(100% - 18px) !important;
+    height: -webkit-calc(100% - 18px) !important;
+    height: -o-calc(100% - 18px) !important;
+    height: calc(100% - 264px) !important;
+}
+
+
+.select2-container .select2-selection--single{
+    height: 38px;
+    border: 1px solid #d1d3d6;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered{
+    line-height: 38px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 36px;
+    position: absolute;
+    top: 1px;
+    right: 1px;
+    width: 24px;
+}
+
+
+/*custom-file-input field style*/
+.custom-file-input:focus ~ .custom-file-label{
+    box-shadow: none !important;
+    border: 1px solid #5e72e4; 
 }

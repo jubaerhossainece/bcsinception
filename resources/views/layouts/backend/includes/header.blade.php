@@ -18,13 +18,13 @@
 				<li>
 					<div class="dropdown drp-user">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<img src="{{url('assets/images/user/avatar-1.jpg')}}" class="img-radius img-header" alt="User-Profile-Image">
+							<img src="{{url('assets/images/user/avatar-4.jpg')}}" class="img-radius img-header" alt="User-Profile-Image">
 							{{Auth()->user()->name}}
 						</a>
 						<div class="dropdown-menu dropdown-menu-right profile-notification">
 							<div class="pro-head">
 								<div class="pro-head-photo">
-									<img src="../assets/images/user/avatar-1.jpg" class="img-radius" alt="User-Profile-Image">
+									<img src="{{url('assets/images/user/avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
 								</div>
 								<div class="pro-head-name">
 									<span>{{auth()->user()->name}}</span>

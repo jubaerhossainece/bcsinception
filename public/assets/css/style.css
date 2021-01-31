@@ -5733,9 +5733,9 @@ body.layout-1 .pcoded-navbar.active-dark .sidemenu li.active:after {
     left: -15px;
 }
 
-.select2-container {
+/*.select2-container {
     width: 100% !important;
-}
+}*/
 
 .user-card .cover-img-block {
     position: relative;
@@ -6312,16 +6312,15 @@ body.layout-1 .pcoded-navbar.active-dark .sidemenu li.active:after {
 ==========================  **/
 .custom-select,
 .form-control {
-    background: #eff3f6;
     padding: 10px 20px;
     font-size: 16px;
     height: auto;
 }
 
-.custom-select:focus,
+/*.custom-select:focus,
   .form-control:focus {
     background: #eff3f6;
-}
+}*/
 
 .custom-select::-moz-placeholder,
   .form-control::-moz-placeholder {

@@ -53,11 +53,19 @@ class UserController extends Controller
             'name' => 'required|string',
             'email' => 'required|email|unique:users,email|max:200',
             'password' => 'required|min:8|string|confirmed|min:6',
-            'role' => 'integer',
+            'role' => 'integer|nullable',
             'image' => 'nullable|image'
         ]);
 
+        $user = User::create([
+            'name' => $request->name,
+            'role_id' => $request->role,
+            'email' => $request->email,
+            'password' => Hash::make($request->password),
+            'status' => $request->filled('status')
+        ]);
 
+        return redirect()->route('app.users.index');
     }
 
     /**

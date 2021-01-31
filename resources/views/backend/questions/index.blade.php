@@ -14,9 +14,21 @@
 					<div class="col-md-12 question">
 						<strong>{{$question->id}}) {{$question->q_text}}</strong>
 					</div>
+					@foreach($question->options as $key => $option)
 					<div class="col-sm-6">
-						<p class="option">a) Lorem ipsum dolor, sit.</p>
+						<p class="option">
+						<?php if($option->option_number === 1) { ?> A)
+
+						<?php } elseif($option->option_number === 2) {
+							?> B)
+						<?php	} elseif($option->option_number === 3) {
+						?>	C)
+						<?php } elseif($option->option_number === 4) {
+						?>	D)
+						<?php } ?>
+						 {{$option->option_text}}</p>
 					</div>
+					@endforeach<!-- 
 					<div class="col-sm-6">
 				  		<p class="option">b)Lorem, ipsum, dolor.</p>
 					</div>
@@ -25,7 +37,7 @@
 					</div>
 					<div class="col-sm-6">
 				  		<p class="option">b)Lorem, ipsum, dolor.</p>
-					</div>
+					</div> -->
 					<div class="col-sm-12 answer">
 						<p><strong>উত্তরঃ </strong>{{ $question->q_ans}}</p>
 					</div>

@@ -14,7 +14,7 @@
 					<li class="nav-item pcoded-menu-caption profile">
 						<div class="pro-sidebar">
 							<div class="pro-head-photo">
-								<img src="{{url('assets/images/user/avatar-1.jpg')}}" class="img-radius" alt="User-Profile-Image">
+								<img src="{{url('assets/images/user/avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
 							</div>
 							<div class="pro-head-name">
 								<h6>{{auth()->user()->name}}</h6>

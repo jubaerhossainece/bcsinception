@@ -1,6 +1,5 @@
 @push('css')
-	
-	
+	<link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
 @endpush
 @extends('layouts.backend.app')
 
@@ -93,6 +92,7 @@
 					<div class="form-group">
 						<label for="role">Select Role</label>
 						<select name="role" class="role-select form-control @error('role') is-invalid @enderror">
+							<option value=""></option>
 							@foreach($roles as $role)
 						  <option @isset($user)
 						  					{{$user->role->id == $role->id ? 'selected' : ''}}
@@ -103,15 +103,16 @@
 						</select>
 
 						@error('role')
-							<span class="alert-danger">
+							<span class="text-danger">
 								<strong>{{$message}}</strong>
 							</span>
 						@enderror	
 					</div>
 
-					<div class="form-group">
-						<label for="image">Select Image</label>
-						<input type="file" id="image" name="image" class="dropify form-control @error('image') is-invalid @enderror" data-default-file="{{isset($user) ? $user->getFirstMediaUrl('image') : ''}}">
+						<label>Select Image</label>
+					<div class="custom-file mb-3">
+						<input type="file" id="image" name="image" class="custom-file-input @error('image') is-invalid @enderror" data-default-file="{{isset($user) ? $user->getFirstMediaUrl('image') : ''}}">
+						<label class="custom-file-label" for="image">Choose file</label>
 
 						@error('image')
 							<span class="text-danger">
@@ -151,5 +152,15 @@
 
 @endsection('content')
 @push('script')
+	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+
+	<script>
+		$(document).ready(function() {
+		    $('.role-select').select2({
+		    	placeholder: "Select a role",
+    			allowClear: true
+		    });
+		});
+	</script>
 
 @endpush

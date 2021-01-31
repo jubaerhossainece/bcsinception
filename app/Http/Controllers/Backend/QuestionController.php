@@ -18,7 +18,7 @@ class QuestionController extends Controller
     public function index()
     {
         Gate::authorize('app.questions.index');
-        $questions = DB::table('questions')->paginate(50);
+        $questions = Question::with('options')->paginate(50);
         return view('backend.questions.index', compact('questions'));
     }
 
