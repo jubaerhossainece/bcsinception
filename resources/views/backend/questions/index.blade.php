@@ -9,6 +9,8 @@
 	<div class="row">
 		<div class="col-md-12">
 			<div class="card question-answer-section">
+				<div class="card-body">
+					
 				@foreach($questions as $key => $question)
 				<div class="row question-answer">
 					<div class="col-md-12 question">
@@ -17,15 +19,11 @@
 					@foreach($question->options as $key => $option)
 					<div class="col-sm-6">
 						<p class="option">
-						<?php if($option->option_number === 1) { ?> A)
-
-						<?php } elseif($option->option_number === 2) {
-							?> B)
-						<?php	} elseif($option->option_number === 3) {
-						?>	C)
-						<?php } elseif($option->option_number === 4) {
-						?>	D)
-						<?php } ?>
+						@if($option->option_number == 1) A)
+						@elseif($option->option_number == 2) B)
+						@elseif($option->option_number == 3) C)
+						@else D)
+						@endif
 						 {{$option->option_text}}</p>
 					</div>
 					@endforeach<!-- 
@@ -46,7 +44,11 @@
 					</div>
 				</div>
 				@endforeach
-			</div>			
+				</div>		
+				<div class="card-footer">
+					{{$questions->links()}}
+				</div>
+			</div>	
 		</div>
 	</div>
 		

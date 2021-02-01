@@ -178,6 +178,14 @@ label.light {
     margin-bottom: 0;
 }
 
+.card-footer {
+    padding: .75rem 1.25rem;
+    background-color: white;
+    border-top: 1px solid rgba(0,0,0,.125);
+    display: flex;
+    justify-content: center;
+}
+
 .btn {
     padding: 6px 9px;
     font-size: 15px;
@@ -380,7 +388,16 @@ label.light {
 
 /*Questions page style*/
 .question-answer-section{
-    padding: 2rem 3rem;
+    padding: 2rem 2rem 0 2rem;
+}
+
+.question-answer-section .pagination {
+    display: -ms-flexbox;
+    display: flex;
+    padding-left: 0;
+    list-style: none;
+    border-radius: .25rem;
+    margin-bottom: 0;
 }
 
 .question-answer-section p{
