@@ -6,9 +6,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
 use App\Models\Course;
-use App\Models\Module;
 use App\Models\Exam;
-use App\Models\Role;
+use App\Models\Question;
 
 class DashboardController extends Controller
 {
@@ -22,9 +21,9 @@ class DashboardController extends Controller
     {
         Gate::authorize('app.dashboard');
         $courses = Course::all();
-        $exams = Exam::all();
-        $categories = Exam::distinct()->count('sub_category');
+        $questions = Question::all()->count();
+        $categories = Exam::distinct()->count('name');
         // dd($exams);
-        return view('backend.index', compact('courses', 'exams', 'categories'));
+        return view('backend.index', compact('courses', 'categories', 'questions'));
     }
 }
