@@ -6,6 +6,11 @@
 *:active{
 	background-color: none;
 }
+
+a:hover{
+    text-decoration: none;    
+}
+
 .fixed-button.active{
     display: none;
 }
@@ -312,7 +317,7 @@ label.light {
 }*/
 
 /*toastr style customization*/
-#toast-container > div {
+/*#toast-container > div {
     transition: 0.9s;
 }
 #toast-container > div:hover {
@@ -323,10 +328,10 @@ label.light {
   -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   filter: alpha(opacity=80);
   cursor: pointer;
-}
+}*/
 
 /*izitoast css style customization*/
-.iziToast{
+/*.iziToast{
     max-width: 22rem;
 }
 
@@ -353,7 +358,7 @@ label.light {
 .iziToast.iziToast-color-red {
     background: #eb2f06bf;
     border-color: #eb2f06bf;
-}
+}*/
 
 /*notification dropdown and user rpofile dropdown*/
 .navbar-expand-lg .navbar-nav .dropdown-menu {
@@ -372,7 +377,7 @@ label.light {
     background-color: white;
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 1.5rem;
     border-radius: 4px;
     box-shadow: 0px 0px 20px 1px #e3e3e4;
 }
@@ -383,6 +388,11 @@ label.light {
 
 .pcoded-header .dropdown .dropdown-toggle{
     text-decoration: none;
+}
+
+/*sidebar*/
+.b-brand{
+    color: white !important;
 }
 
 
@@ -409,12 +419,53 @@ label.light {
     margin-bottom: 2rem;
 }
 
+.question{
+    display: flex;
+    justify-content: space-between;
+   /* background: #f6f5fb;*/
+    padding: 10px;
+}
 
 .question strong{
     font-size: 16px;
+    width: calc(100% - 40px);
     font-weight: 600;
     color: #323238;
+    margin-right: 1rem;
+    display: flex;
+    align-items: center;
 }
+
+.question .action-button{
+    height: 38px;
+    width: 38px;
+    border-radius: 50% !important;
+    margin-left: 1rem;
+    border: 0px solid lightgray;
+    border-radius: 3px;
+    background-color: white;
+    transition: all 0.3s ease-in-out;
+/*    box-shadow: 0 0 10px 0 #eae9ea;*/
+} 
+
+.question .action-button:hover{
+    background-color: #f2eff9;
+    box-shadow: 0 0 6px 0px #eae9ea;
+}
+
+.question .action-button i{
+    font-size: 19px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: darkgray;
+    transition: all 0.3s ease-in-out;
+}
+
+.question .action-button:hover i{
+    color: black;
+}
+
 
 .option{
     font-size: 14px;
@@ -436,6 +487,44 @@ label.light {
 
 .explanation strong{
     font-weight: 600;
+}
+
+
+/*exam style*/
+
+.module-name{
+    text-transform: uppercase;
+}
+
+.course-title{
+    text-transform: uppercase;
+    color: #324cdd;
+}
+
+#exams{
+    padding: 1rem 2rem;    
+}
+
+.exam-list-ol{
+    padding-left: 1.3rem;
+}
+
+.exam-btn{    
+    background-color: lightgray;
+    display: block;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.exam-btn:hover {
+    background: #324cdd;
+    color: white;
+    transform: scaleX(1.07);
+}
+
+.exam-list{
+    margin-bottom: 10px;
 }
 
 /*select2 style customization*/

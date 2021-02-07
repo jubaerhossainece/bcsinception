@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Gate;
 use App\Models\Module;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
+use App\Models\Exam;
 
 class RoleController extends Controller
 {
@@ -20,7 +21,9 @@ class RoleController extends Controller
     public function index()
     {
         Gate::authorize('app.roles.index');
-        $roles = Role::with('permissions')->get();
+        $roles = Role::with('users')->get();
+        $modules = Exam::all();
+        // dd($roles->permissions);
         return view('backend.roles.index', compact('roles'));
     }
 

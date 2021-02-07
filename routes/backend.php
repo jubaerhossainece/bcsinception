@@ -6,6 +6,8 @@ use App\Http\Controllers\Backend\UserController;
 use App\Http\Controllers\Backend\PermissionController;
 use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\QuestionController;
+use App\Http\Controllers\Backend\CourseController;
+use App\Http\Controllers\Backend\ExamController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,3 +26,5 @@ Route::resource('/users', UserController::class);
 Route::resource('/roles', RoleController::class);
 Route::resource('/permissions', PermissionController::class);
 Route::resource('/questions', QuestionController::class);
+Route::get('/courses/{course}', [CourseController::class, 'link'])->name('courses');
+Route::get('/exams/{id}', [ExamController::class, 'exam'])->name('exams');

@@ -3,6 +3,9 @@
 @endpush
 @extends('layouts.backend.app')
 @section('content')
+<?php
+dd($roles->permissions);
+?>
 <div class="page-header">
 	<h4 class="page-title">Role Management</h4>
 </div>

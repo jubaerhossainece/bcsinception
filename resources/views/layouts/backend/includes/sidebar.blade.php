@@ -4,8 +4,7 @@
 		<div class="navbar-wrapper ">
 			<div class="navbar-brand header-logo">
 				<a href="index.html" class="b-brand">
-					<img src="{{url('assets/images/logo.svg')}}" alt="" class="logo images">
-					<img src="{{url('assets/images/logo-icon.svg')}}" alt="" class="logo-thumb images">
+					InceptionBCS
 				</a>
 				<a class="mobile-menu" id="mobile-collapse" href="#!"><span></span></a>
 			</div>
@@ -47,6 +46,19 @@
 						Permissions</span></a>
 					</li>
 					@endcan
+					<li class="nav-item pcoded-hasmenu">
+						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Modules</span></a>
+						<ul class="pcoded-submenu">
+							@foreach($courses as $course)
+							@if($course->name !== 'not in use')
+								<li class=""><a href="{{route('app.courses', $course->id)}}" class="">{{$course->name}}</a></li>
+								@endif
+							@endforeach
+						</ul>
+					</li>
+
+
+
 					<li class="nav-item pcoded-menu-caption">
 						<label>UI Element</label>
 					</li>

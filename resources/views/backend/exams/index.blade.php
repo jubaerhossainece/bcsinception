@@ -4,11 +4,9 @@
 @extends('layouts.backend.app')
 @section('content')
 <div class="page-header">
-	<h4 class="page-title">Question Section</h4>
+	<h4 class="page-title module-name">Exam Name: <span class="course-title">{{$exam->name}}</span></h4>
 </div>
-	<div class="row">
-		<div class="col-md-12">
-			<div class="card question-answer-section">
+	<div class="card question-answer-section">
 				<div class="card-body">
 					
 				@foreach($questions as $key => $question)
@@ -48,12 +46,8 @@
 				</div>
 				@endforeach
 				</div>		
-				<div class="card-footer">
-					{{$questions->links()}}
-				</div>
-			</div>	
-		</div>
-	</div>
+
+			</div>
 		
 
 @endsection('content')
