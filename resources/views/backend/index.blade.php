@@ -24,7 +24,8 @@
 		<div class="row">
 
 			<!-- product profit start -->
-			<div class="col-xl-3 col-md-6">
+			@can('app.dashboard')
+			<div class="col-xl-4 col-md-6">
 				<div class="card prod-p-card bg-c-red">
 					<div class="card-body">
 						<div class="row align-items-center m-b-25">
@@ -39,7 +40,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-3 col-md-6">
+			<div class="col-xl-4 col-md-6">
 				<div class="card prod-p-card bg-c-blue">
 					<div class="card-body">
 						<div class="row align-items-center m-b-25">
@@ -54,7 +55,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-xl-3 col-md-6">
+			<div class="col-xl-4 col-md-6">
 				<div class="card prod-p-card bg-c-green">
 					<div class="card-body">
 						<div class="row align-items-center m-b-25">
@@ -69,24 +70,9 @@
 					</div>
 				</div>
 			</div>
-			<!-- <div class="col-xl-3 col-md-6">
-				<div class="card prod-p-card bg-c-yellow">
-					<div class="card-body">
-						<div class="row align-items-center m-b-25">
-							<div class="col">
-								<h6 class="m-b-5 text-white">Product Sold</h6>
-								<h3 class="m-b-0 text-white">6,784</h3>
-							</div>
-							<div class="col-auto">
-								<i class="fas fa-tags text-c-yellow f-18"></i>
-							</div>
-						</div>
-						<p class="m-b-0 text-white"><span class="label label-warning m-r-10">+52%</span>From Previous Month</p>
-					</div>
-				</div>
-			</div> -->
-			<!-- product profit end -->
+			@endcan
 			
+			<!--profile will be shown below -->
 			<div class="col-md-6 col-xl-4">
 				<div class="card user-card">
 					<div class="card-header">

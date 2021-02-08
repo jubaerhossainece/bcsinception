@@ -3,9 +3,6 @@
 @endpush
 @extends('layouts.backend.app')
 @section('content')
-<?php
-dd($roles->permissions);
-?>
 <div class="page-header">
 	<h4 class="page-title">Role Management</h4>
 </div>
@@ -36,7 +33,7 @@ dd($roles->permissions);
 						<tbody>
 							@foreach($roles as $key => $role)
 								<tr>
-									<td class="text-center">{{$key+1}}</td>
+									<td class="text-center">{{$loop->index+1}}</td>
 									<td class="text-center">{{$role->name}}</td>
 									<td class="text-center">
 										@if($role->permissions->count() > 0)

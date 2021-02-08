@@ -12,7 +12,7 @@
 				@foreach($questions as $key => $question)
 				<div class="row question-answer">
 					<div class="col-md-12 question">
-						<strong>{{$question->id}}) {{$question->q_text}}</strong>
+						<strong>{{$loop->index+1}}) {{$question->q_text}}</strong>
 						<button class="action-button">
 							<i class="fas fa-ellipsis-h"></i>
 						</button>
@@ -58,7 +58,18 @@
 	<script src="{{url('assets/js/plugin/datatables/datatables.min.js')}}"></script>
 	<script>
 		$(document).ready(function() {
-    $('#rolesTable').DataTable();
-} );
+		    $('#rolesTable').DataTable();
+		} );
+
+		//copy cut restricted
+		$(document).keydown(function(event){
+			if(event.keyCode === 123){
+				return false;
+			} else if(event.ctrlKey && event.shiftKey && event.keyCode ==73){
+				return false;
+			}
+		});
+
+		document.addEventListener('contextmenu', event => event.preventDefault());
 	</script>
 @endpush

@@ -109,9 +109,9 @@
 						@enderror	
 					</div>
 
-						<label>Select Image</label>
-					<div class="custom-file mb-3">
-						<input type="file" id="image" name="image" class="custom-file-input @error('image') is-invalid @enderror" data-default-file="{{isset($user) ? $user->getFirstMediaUrl('image') : ''}}">
+					<!-- 	<label>Select Image</label> -->
+					<!-- <div class="custom-file mb-3">
+						<input type="file" id="image" name="image" class="custom-file-input @error('image') is-invalid @enderror" data-default-file="{{isset($user) ? '' : ''}}">
 						<label class="custom-file-label" for="image">Choose file</label>
 
 						@error('image')
@@ -119,7 +119,7 @@
 								<strong>{{$message}}</strong>
 							</span>
 						@enderror
-					</div>
+					</div> -->
 
 					<div class="form-group">
 						<div class="custom-control custom-switch">

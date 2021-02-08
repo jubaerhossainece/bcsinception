@@ -28,14 +28,7 @@
 	<link rel="stylesheet" href="{{url('/css/custom.css')}}">
 </head>
 
-<body class="">
-	<!-- [ Pre-loader ] start -->
-	<!-- <div class="loader-bg">
-		<div class="loader-track">
-			<div class="loader-fill"></div>
-		</div>
-	</div> -->
-	<!-- [ Pre-loader ] End -->
+<body class="" oncopy="alert('Copying prohibited'); return false" false" oncut="return false" onpaste="return false">
  	@include('layouts.backend.includes.sidebar')
 
  	@include('layouts.backend.includes.header')

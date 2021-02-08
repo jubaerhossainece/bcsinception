@@ -3,13 +3,12 @@
 namespace App\Http\Controllers\Backend;
 
 use App\Http\Controllers\Controller;
-use App\Models\Role;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
-use App\Models\Module;
 use Illuminate\Validation\Rule;
 use Illuminate\Support\Str;
-use App\Models\Exam;
+use App\Models\Role;
+use App\Models\Module;
 
 class RoleController extends Controller
 {
@@ -22,8 +21,6 @@ class RoleController extends Controller
     {
         Gate::authorize('app.roles.index');
         $roles = Role::with('users')->get();
-        $modules = Exam::all();
-        // dd($roles->permissions);
         return view('backend.roles.index', compact('roles'));
     }
 

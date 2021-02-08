@@ -65,6 +65,15 @@
 	<script>
 		$(document).ready(function() {
     $('#rolesTable').DataTable();
-} );
+
+    // copy paste and rightclick disabled
+    $('.question-answer-section').bind('cut copy paste', function(e){
+    	e.preventDefault();
+    });
+
+    $('.question-answer-section').on('contextmenu', function(event){
+    	return false;
+    });
+});
 	</script>
 @endpush
