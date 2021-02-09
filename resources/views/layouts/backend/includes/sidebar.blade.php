@@ -52,7 +52,7 @@
 							@foreach($courses as $course)
 							@if($course->name !== 'not in use')
 								<li class=""><a href="{{route('app.courses', $course->id)}}" class="">{{$course->name}}</a></li>
-								@endif
+							@endif
 							@endforeach
 						</ul>
 					</li>

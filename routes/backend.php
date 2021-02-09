@@ -26,5 +26,5 @@ Route::resource('/users', UserController::class);
 Route::resource('/roles', RoleController::class);
 Route::resource('/permissions', PermissionController::class);
 Route::resource('/questions', QuestionController::class);
-Route::get('/courses/{course}', [CourseController::class, 'link'])->name('courses');
+Route::get('/courses/{category}', [CourseController::class, 'link'])->name('courses');
 Route::get('/exams/{id}', [ExamController::class, 'exam'])->name('exams');

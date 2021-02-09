@@ -491,6 +491,32 @@ label.light {
 
 
 /*exam style*/
+.module-box{
+    margin-bottom: 1rem;
+    height: 4rem;
+}
+
+.inside-box{
+    margin: 0 auto;
+}
+
+.module-link{
+    color: white;
+    font-size: 16px;
+    height: 100%;
+    display: flex;
+    width: 100%;
+    background-color: #e3342f;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.module-link:hover{
+    color: white;
+    background-color: #d65959;
+}
 
 .module-name{
     text-transform: uppercase;
@@ -510,7 +536,8 @@ label.light {
 }
 
 .exam-btn{    
-    background-color: lightgray;
+    background-color: #324cdd;
+    color: white;
     display: block;
     padding: 10px;
     border-radius: 4px;
@@ -518,8 +545,8 @@ label.light {
 }
 
 .exam-btn:hover {
-    background: #324cdd;
-    color: white;
+    background: lightgray;
+    color: #324cdd;
     transform: scaleX(1.07);
 }
 

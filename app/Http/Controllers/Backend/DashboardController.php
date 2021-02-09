@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Gate;
 use App\Models\Course;
 use App\Models\Exam;
 use App\Models\Question;
+use Illuminate\Support\Facades\DB;
 
 class DashboardController extends Controller
 {
@@ -22,8 +23,9 @@ class DashboardController extends Controller
         Gate::authorize('app.dashboard');
         $courses = Course::all();
         $questions = Question::all()->count();
-        $categories = Exam::distinct()->count('name');
-        // dd($exams);
-        return view('backend.index', compact('courses', 'categories', 'questions'));
+        $categories = Exam::distinct('sub_category')->count();
+        $sub_categories = DB::table('categories')->get();
+        
+        return view('backend.index', compact('courses', 'categories', 'questions','sub_categories'));
     }
 }

@@ -4,7 +4,7 @@
 @extends('layouts.backend.app')
 @section('content')
 <div class="page-header">
-	<h4 class="page-title module-name">Module Name: <span class="course-title">{{$course->name}}</span></h4>
+	<h4 class="page-title module-name">Module Name: <span class="course-title">{{$course}}</span></h4>
 </div>
 	<div class="row">
 		<div class="col-md-12">
@@ -17,7 +17,7 @@
 					<ol class="exam-list-ol">
 						@foreach($exams as $exam)
 						<li class="exam-list">
-							<a href="{{route('app.exams', $exam->id)}}" class="exam-btn">{{$exam->name}}</a>
+							<a href="{{route('app.exams', $exam->id)}}" class="exam-btn">{{$exam->category}}</a>
 						</li>
 						@endforeach
 					</ol>
