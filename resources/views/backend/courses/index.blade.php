@@ -4,7 +4,7 @@
 @extends('layouts.backend.app')
 @section('content')
 <div class="page-header">
-	<h4 class="page-title module-name">Module Name: <span class="course-title">{{$course}}</span></h4>
+	<h4 class="page-title module-name">Category Name: <span class="course-title">{{$category}}</span></h4>
 </div>
 	<div class="row">
 		<div class="col-md-12">

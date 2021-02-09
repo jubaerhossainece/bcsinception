@@ -12,7 +12,7 @@ class CourseController extends Controller
 {
     public function link(Request $request, $category){
     	$exams = DB::table('exams')->where('name', 'like', '%'.$category.'%')->get();
-    	$course = $category;
-    	return view('backend.courses.index', compact('exams', 'course'));
+    	$category;
+    	return view('backend.courses.index', compact('exams', 'category'));
     }
 }

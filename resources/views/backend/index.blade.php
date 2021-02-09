@@ -13,7 +13,7 @@
 						</div>
 						<ul class="breadcrumb">
 							<li class="breadcrumb-item"><i class="feather icon-home"></i></li>
-							<li class="breadcrumb-item"><a href="#!">Analytics Dashboard</a></li>
+							<li class="breadcrumb-item">Analytics Dashboard</li>
 						</ul>
 					</div>
 				</div>
@@ -79,8 +79,10 @@
 		<!-- [ Main Content ] end -->
 	</div>
 </div>
-	<div class="card question-answer-section">
-		<div class="card-body">
+<div class="page-header">
+	<h4>Exam Archives</h4>
+</div>
+	<div class="">
 			<div class="row">
 			@foreach($sub_categories as $category)
 
@@ -90,8 +92,6 @@
 						</a>
 					</div>
 			@endforeach
-			</div>
-	
 		</div>		
 	</div>
 		

@@ -586,3 +586,9 @@ label.light {
     box-shadow: none !important;
     border: 1px solid #5e72e4; 
 }
+
+@media only screen and (max-width: 600px) {
+  #exam {
+    padding: 0 !important;
+  }
+}
