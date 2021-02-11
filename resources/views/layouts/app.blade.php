@@ -26,6 +26,7 @@
 
     <!-- vendor css -->
     <link rel="stylesheet" href="{{url('assets/css/style.css')}}">
+    <link rel="stylesheet" href="{{url('assets/css/layoutscustom.css')}}">
 
     <!-- styles -->
 <!--     <link rel="stylesheet" href="{{url('/css/custom.css')}}"> -->
@@ -37,7 +38,7 @@
         <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
-                    {{ config('app.name', 'Inception') }}
+                    <img src="{{url('assets/images/logo.png')}}" alt="">
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>

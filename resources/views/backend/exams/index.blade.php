@@ -14,40 +14,40 @@
 	</div>
 </div>
 	<div class="card question-answer-section">
-				<div class="card-body">
-					
-				@foreach($questions as $key => $question)
-				<div class="row question-answer">
-					<div class="col-md-12 question">
-						<strong>{{$loop->index+1}}) {{$question->q_text}}</strong>
-						@canany(['app.questions.create', 'app.questions.edit', 'app.questions.destroy'])
-						<button class="action-button">
-							<i class="fas fa-ellipsis-h"></i>
-						</button>
-						@endcanany
-					</div>
-					@foreach($question->options as $key => $option)
-					<div class="col-sm-6">
-						<p class="option">
-						@if($option->option_number == 1) A)
-						@elseif($option->option_number == 2) B)
-						@elseif($option->option_number == 3) C)
-						@else D)
-						@endif
-						 {{$option->option_text}}</p>
-					</div>
-					@endforeach
-					<div class="col-sm-12 answer">
-						<p><strong>উত্তরঃ </strong>{{ $question->q_ans}}</p>
-					</div>
-					<div class="col-sm-12 explanation">
-						<p><strong>ব্যাখ্যাঃ </strong>{{ $question->explanation}}</p>
-					</div>
-				</div>
-				@endforeach
-				</div>		
-
+		<div class="card-body">
+			
+		@foreach($questions as $key => $question)
+		<div class="row question-answer">
+			<div class="col-md-12 question">
+				<strong>{{$loop->index+1}}) {{$question->q_text}}</strong>
+				@canany(['app.questions.create', 'app.questions.edit', 'app.questions.destroy'])
+				<button class="action-button">
+					<i class="fas fa-ellipsis-h"></i>
+				</button>
+				@endcanany
 			</div>
+			@foreach($question->options as $key => $option)
+			<div class="col-sm-6">
+				<p class="option">
+				@if($option->option_number == 1) A)
+				@elseif($option->option_number == 2) B)
+				@elseif($option->option_number == 3) C)
+				@else D)
+				@endif
+				 {{$option->option_text}}</p>
+			</div>
+			@endforeach
+			<div class="col-sm-12 answer">
+				<p><strong>উত্তরঃ </strong>{{ $question->q_ans}}</p>
+			</div>
+			<div class="col-sm-12 explanation">
+				<p><strong>ব্যাখ্যাঃ </strong>{{ $question->explanation}}</p>
+			</div>
+		</div>
+		@endforeach
+		</div>		
+
+	</div>
 		
 
 @endsection('content')

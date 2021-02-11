@@ -3,17 +3,17 @@
 	<nav class="pcoded-navbar menupos-fixed menu-light brand-blue ">
 		<div class="navbar-wrapper ">
 			<div class="navbar-brand header-logo">
-				<a href="index.html" class="b-brand">
+				<a href="#" class="b-brand">
 					InceptionBCS
 				</a>
-				<a class="mobile-menu" id="mobile-collapse" href=""><span></span></a>
+				<a class="mobile-menu" id="mobile-collapse" href="#"><span></span></a>
 			</div>
 			<div class="navbar-content scroll-div">
 				<ul class="nav pcoded-inner-navbar">
 					<li class="nav-item pcoded-menu-caption profile">
 						<div class="pro-sidebar">
 							<div class="pro-head-photo">
-								<img src="{{url('assets/images/user/avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
+								<img src="{{url('assets/images/user/avatar.png')}}" class="img-radius" alt="User-Profile-Image">
 							</div>
 							<div class="pro-head-name">
 								<h6>{{auth()->user()->name}}</h6>

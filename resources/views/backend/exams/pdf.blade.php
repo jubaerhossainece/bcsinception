@@ -4,28 +4,32 @@
 <head>
 
 	<title>Inception BCS</title>
-	<style>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="description" content="Flash Able Bootstrap admin template made using Bootstrap 4 and it has huge amount of ready made feature, UI components, pages which completely fulfills any dashboard needs." />
+	<meta name="keywords"
+		content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, Flash Able, Flash Able bootstrap admin template">
+	<meta name="author" content="Codedthemes" />
+	<!-- <style>
         @font-face {
-            font-family: 'Firefly','kalpurush';
+            font-family: 'kalpurush';
             font-style: normal;
             font-weight: normal;
             src: url(http://example.com/fonts/firefly.ttf) format('truetype');
         }
-    </style>
+    </style> -->
 
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="author" content="Codedthemes" />
 
+
+	<link rel="stylesheet" href="{{url('assets/css/style.css')}}">
 	<!-- Favicon icon -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
 	<!-- Custom css -->
 	<link rel="stylesheet" href="{{url('/css/custom.css')}}">
-	<style type="text/css">
-		body{
-		    font-family: 'kalpurush';
-		}
-	</style>
 </head>
 
 <body class="" oncopy="alert('Copying prohibited'); return false" oncut="return false" onpaste="return false">

@@ -2,29 +2,29 @@
 	<!-- [ Header ] start -->
 	<header class="navbar pcoded-header navbar-expand-lg navbar-light headerpos-fixed">
 		<div class="m-header">
-			<a class="mobile-menu" id="mobile-collapse1" href=""><span></span></a>
+			<a class="mobile-menu" id="mobile-collapse1" href="#"><span></span></a>
 			<a href="#" class="b-brand">
 				Inception bcs				
-				<img src="{{url('assets/images/logo-icon.svg')}}" alt="" class="logo-thumb images">
+				<img src="{{url('assets/images/logo.png')}}" alt="" class="logo-thumb images">
 			</a>
 		</div>
 		<a class="mobile-menu" id="mobile-header" href="">
 			<i class="feather icon-more-horizontal"></i>
 		</a>
 		<div class="collapse navbar-collapse">
-			<a href="" class="mob-toggler"></a>
+			<a href="#" class="mob-toggler"></a>
 			<ul class="navbar-nav ml-auto">
 				
 				<li>
 					<div class="dropdown drp-user">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-							<img src="{{url('assets/images/user/avatar-4.jpg')}}" class="img-radius img-header" alt="User-Profile-Image">
+							<img src="{{url('assets/images/user/avatar.png')}}" class="img-radius img-header" alt="User-Profile-Image">
 							{{Auth()->user()->name}}
 						</a>
 						<div class="dropdown-menu dropdown-menu-right profile-notification">
 							<div class="pro-head">
 								<div class="pro-head-photo">
-									<img src="{{url('assets/images/user/avatar-4.jpg')}}" class="img-radius" alt="User-Profile-Image">
+									<img src="{{url('assets/images/user/avatar.png')}}" class="img-radius" alt="User-Profile-Image">
 								</div>
 								<div class="pro-head-name">
 									<span>{{auth()->user()->name}}</span>
@@ -37,7 +37,7 @@
 								<li>
 									<a href="{{route('app.users.show', auth()->user()->id)}}" class="dropdown-item">
 									<i class="fas fa-user-alt"></i>
-									Profile
+									My Profile
 									</a>
 								</li>
 								<li>

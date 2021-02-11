@@ -24,7 +24,7 @@
 		<div class="row">
 
 			<!-- product profit start -->
-			@can('app.dashboard')
+			@can('app.roles.destroy')
 			<div class="col-xl-4 col-md-6">
 				<div class="card prod-p-card bg-c-red">
 					<div class="card-body">
