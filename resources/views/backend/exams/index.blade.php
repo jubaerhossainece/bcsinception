@@ -3,8 +3,15 @@
 @endpush
 @extends('layouts.backend.app')
 @section('content')
-<div class="page-header">
-	<h4 class="page-title module-name">Exam Name: <span class="course-title">{{$exam->name}}</span></h4>
+<div class="page-header exam-set">
+	<div class="row">
+		<div class="col-md-10">
+			<h4 class="page-title module-name">Exam Name: <span class="course-title">{{$exam->sub_category}}</span></h4>
+		</div>
+		<div class="col-md-2 download-pdf">
+			<a href="{{route('app.download', $exam->id)}}" class="btn btn-danger float-right">Download PDF</a>
+		</div>
+	</div>
 </div>
 	<div class="card question-answer-section">
 				<div class="card-body">
@@ -13,9 +20,11 @@
 				<div class="row question-answer">
 					<div class="col-md-12 question">
 						<strong>{{$loop->index+1}}) {{$question->q_text}}</strong>
+						@canany(['app.questions.create', 'app.questions.edit', 'app.questions.destroy'])
 						<button class="action-button">
 							<i class="fas fa-ellipsis-h"></i>
 						</button>
+						@endcanany
 					</div>
 					@foreach($question->options as $key => $option)
 					<div class="col-sm-6">
@@ -27,16 +36,7 @@
 						@endif
 						 {{$option->option_text}}</p>
 					</div>
-					@endforeach<!-- 
-					<div class="col-sm-6">
-				  		<p class="option">b)Lorem, ipsum, dolor.</p>
-					</div>
-					<div class="col-sm-6">
-						<p class="option">a) Lorem ipsum dolor, sit.</p>
-					</div>
-					<div class="col-sm-6">
-				  		<p class="option">b)Lorem, ipsum, dolor.</p>
-					</div> -->
+					@endforeach
 					<div class="col-sm-12 answer">
 						<p><strong>উত্তরঃ </strong>{{ $question->q_ans}}</p>
 					</div>

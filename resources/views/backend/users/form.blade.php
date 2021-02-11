@@ -7,7 +7,7 @@
 
 <div class="page-header">
 	<h4 class="page-title">
-		{{isset($user) ? 'Edit' : 'Create'}} User
+		{{isset($user) ? 'Edit' : 'Create'}} Profile
 	</h4>
 	<a href="{{route('app.users.index')}}" class="btn btn-secondary">
 		<i class="fas fa-arrow-circle-left"></i>

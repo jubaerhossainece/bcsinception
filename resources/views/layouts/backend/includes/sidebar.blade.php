@@ -40,12 +40,6 @@
 						Roles</span></a>
 					</li>
 					@endcan
-					@can('app.permissions.index')
-					<li class="nav-item">
-						<a href="{{route('app.permissions.index')}}" class="nav-link"><span class="pcoded-micon"><i class="fas fa-users"></i></span><span class="pcoded-mtext">
-						Permissions</span></a>
-					</li>
-					@endcan
 					<li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Modules</span></a>
 						<ul class="pcoded-submenu">
@@ -57,7 +51,12 @@
 						</ul>
 					</li>
 
-
+					<li class="nav-item pcoded-hasmenu">
+						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-settings"></i></span><span class="pcoded-mtext">Settings</span></a>
+						<ul class="pcoded-submenu">
+							<li class=""><a href="{{route('app.users.edit', auth()->user()->id)}}" class="">Edit Profile</a></li>
+							<li class=""><a href="" class="">Change Password</a></li>
+						</ul>
 
 					<li class="nav-item pcoded-menu-caption">
 						<label>UI Element</label>

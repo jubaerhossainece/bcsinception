@@ -28,3 +28,4 @@ Route::resource('/permissions', PermissionController::class);
 Route::resource('/questions', QuestionController::class);
 Route::get('/courses/{category}', [CourseController::class, 'link'])->name('courses');
 Route::get('/exams/{id}', [ExamController::class, 'exam'])->name('exams');
+Route::get('/download/{id}', [ExamController::class, 'downloadPDF'])->name('download');

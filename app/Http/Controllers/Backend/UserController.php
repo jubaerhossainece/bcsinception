@@ -75,7 +75,8 @@ class UserController extends Controller
      */
     public function show(User $user)
     {
-        //
+        Gate::authorize('app.users.show');
+        return view('backend.users.show', compact('user'));
     }
 
     /**
@@ -131,6 +132,6 @@ class UserController extends Controller
      */
     public function destroy(User $user)
     {
-        //
+        
     }
 }
