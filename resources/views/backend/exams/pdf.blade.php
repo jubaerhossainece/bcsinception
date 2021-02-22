@@ -11,25 +11,20 @@
 	<meta name="keywords"
 		content="admin templates, bootstrap admin templates, bootstrap 4, dashboard, dashboard templets, sass admin templets, html admin templates, responsive, bootstrap admin templates free download,premium bootstrap admin templates, Flash Able, Flash Able bootstrap admin template">
 	<meta name="author" content="Codedthemes" />
-	<!-- <style>
-        @font-face {
-            font-family: 'kalpurush';
-            font-style: normal;
-            font-weight: normal;
-            src: url(http://example.com/fonts/firefly.ttf) format('truetype');
-        }
-    </style> -->
-
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 	<meta name="author" content="Codedthemes" />
 
-
-	<link rel="stylesheet" href="{{url('assets/css/style.css')}}">
 	<!-- Favicon icon -->
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<!-- 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
 
 	<!-- Custom css -->
-	<link rel="stylesheet" href="{{url('/css/custom.css')}}">
+	<!-- <link rel="stylesheet" href="{{url('/css/custom.css')}}"> -->
+
+	<style>
+		body {
+		    font-family: 'bangla', Arial, sans-serif;
+		}
+	</style>
 </head>
 
 <body class="" oncopy="alert('Copying prohibited'); return false" oncut="return false" onpaste="return false">

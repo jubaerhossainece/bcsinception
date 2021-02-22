@@ -8,6 +8,7 @@ use App\Http\Controllers\Backend\RoleController;
 use App\Http\Controllers\Backend\QuestionController;
 use App\Http\Controllers\Backend\CourseController;
 use App\Http\Controllers\Backend\ExamController;
+use App\Http\Controllers\Backend\PasswordController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +28,8 @@ Route::resource('/roles', RoleController::class);
 Route::resource('/permissions', PermissionController::class);
 Route::resource('/questions', QuestionController::class);
 Route::get('/courses/{category}', [CourseController::class, 'link'])->name('courses');
+Route::get('/courses/instant/{id}', [CourseController::class, 'instant_exams'])->name('courses.instant');
 Route::get('/exams/{id}', [ExamController::class, 'exam'])->name('exams');
 Route::get('/download/{id}', [ExamController::class, 'downloadPDF'])->name('download');
+Route::get('/password/edit', [PasswordController::class, 'edit'])->name('password.edit');
+Route::put('/password/update', [PasswordController::class, 'update'])->name('password.update');

@@ -14,8 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
+	if(Auth::check()){
+		return redirect()->route('app.dashboard');
+	}
     return view('auth.login');
-});
+})->middleware('auth');
 
 Auth::routes();
 

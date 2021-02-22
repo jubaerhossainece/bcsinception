@@ -6,13 +6,21 @@
 @section('content')
 
 <div class="page-header">
-	<h4 class="page-title">
-		{{isset($user) ? 'Edit' : 'Create'}} Profile
-	</h4>
-	<a href="{{route('app.users.index')}}" class="btn btn-secondary">
-		<i class="fas fa-arrow-circle-left"></i>
-		Back To list
-	</a>
+	<div class="row">	
+		<div class="col-md 6">
+			<h4 class="page-title">
+			{{isset($user) ? 'Edit' : 'Create'}} Profile
+			</h4>
+		</div>
+		<div class="col-md-6">
+			@can('app.users.index')
+			<a href="{{route('app.users.index')}}" class="btn btn-secondary float-right">
+				<i class="fas fa-arrow-circle-left"></i>
+				Back To list
+			</a>
+			@endcan
+		</div>
+	</div>
 </div>
 
 <!-- User Information section -->

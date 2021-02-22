@@ -30,7 +30,7 @@
 	<link rel="stylesheet" href="{{url('/css/custom.css')}}">
 </head>
 
-<body class="" oncopy="alert('Copying prohibited'); return false" oncut="return false" onpaste="return false">
+<body class="">
  	@include('layouts.backend.includes.sidebar')
 
  	@include('layouts.backend.includes.header')
@@ -53,9 +53,10 @@
 	<script src="{{url('assets/js/vendor-all.min.js')}}"></script>
 	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" ></script>
 	
+	@stack('script')
+	
 	<script src="{{url('assets/js/pcoded.min.js')}}"></script>
 	<script src="{{url('js/script.js')}}"></script>
-	@stack('script')
 
 </body>
 

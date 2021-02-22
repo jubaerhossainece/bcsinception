@@ -20,6 +20,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">
 							<img src="{{url('assets/images/user/avatar.png')}}" class="img-radius img-header" alt="User-Profile-Image">
 							{{Auth()->user()->name}}
+							<i class="fas fa-chevron-down"></i>
 						</a>
 						<div class="dropdown-menu dropdown-menu-right profile-notification">
 							<div class="pro-head">
@@ -28,12 +29,14 @@
 								</div>
 								<div class="pro-head-name">
 									<span>{{auth()->user()->name}}</span>
-									<br>
+									@if(auth()->user()->role->name !== 'User')
+									
 									<strong>{{auth()->user()->role->name}}</strong>
+									@endif
 								</div>
 							</div>
 							<ul class="pro-body">
-								<li><a href="" class="dropdown-item"><i class="feather icon-settings"></i> Settings</a></li>
+								<li><a href="{{route('app.password.edit')}}" class="dropdown-item"><i class="fas fa-lock"></i> Change Password</a></li>
 								<li>
 									<a href="{{route('app.users.show', auth()->user()->id)}}" class="dropdown-item">
 									<i class="fas fa-user-alt"></i>

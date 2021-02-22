@@ -4,16 +4,23 @@
 @extends('layouts.backend.app')
 
 @section('content')
-
 <div class="page-header">
-	<h4 class="page-title">
-		{{isset($role) ? 'Edit' : 'Create'}} Role
-	</h4>
-	<a href="{{route('app.roles.index')}}" class="btn btn-secondary">
-		<i class="fas fa-arrow-circle-left"></i>
-		Back To list
-	</a>
+	<div class="row">	
+		<div class="col-md 6">
+			<h4 class="page-title">
+				{{isset($role) ? 'Edit' : 'Create'}} Role
+			</h4>
+		</div>
+		<div class="col-md-6">
+			<a href="{{route('app.roles.index')}}" class="btn btn-secondary float-right">
+				<i class="fas fa-arrow-circle-left"></i>
+				Back To list
+			</a>
+		</div>
+	</div>
 </div>
+
+
 <div class="row">
 	<div class="col-md-12">
 		<div class="card">

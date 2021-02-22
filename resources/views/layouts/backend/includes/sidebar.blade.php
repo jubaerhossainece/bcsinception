@@ -16,9 +16,11 @@
 								<img src="{{url('assets/images/user/avatar.png')}}" class="img-radius" alt="User-Profile-Image">
 							</div>
 							<div class="pro-head-name">
-								<h6>{{auth()->user()->name}}</h6>
+								<h4>{{auth()->user()->name}}</h4>
+								@if(auth()->user()->role->name !== 'User')
 								
-								<h4>{{auth()->user()->role->name}}</h4>
+								<h4><strong>{{auth()->user()->role->name}}</strong></h4>
+								@endif
 							</div>
 						</div>
 					</li>
@@ -41,21 +43,21 @@
 					</li>
 					@endcan
 					<li class="nav-item pcoded-hasmenu">
-						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Modules</span></a>
-						<ul class="pcoded-submenu">
+						<a href="{{route('app.courses.instant', 1)}}" class="nav-link"><span class="pcoded-micon"><i class="feather icon-box"></i></span><span class="pcoded-mtext">Modules</span></a>
+						<!-- <ul class="pcoded-submenu">
 							@foreach($courses as $course)
 							@if($course->name !== 'not in use')
 								<li class=""><a href="{{route('app.courses', $course->id)}}" class="">{{$course->name}}</a></li>
 							@endif
 							@endforeach
-						</ul>
+						</ul> -->
 					</li>
 
 					<li class="nav-item pcoded-hasmenu">
 						<a href="#!" class="nav-link"><span class="pcoded-micon"><i class="feather icon-settings"></i></span><span class="pcoded-mtext">Settings</span></a>
 						<ul class="pcoded-submenu">
 							<li class=""><a href="{{route('app.users.edit', auth()->user()->id)}}" class="">Edit Profile</a></li>
-							<li class=""><a href="" class="">Change Password</a></li>
+							<li class=""><a href="{{route('app.password.edit')}}" class="">Change Password</a></li>
 						</ul>
 
 					<li class="nav-item pcoded-menu-caption">

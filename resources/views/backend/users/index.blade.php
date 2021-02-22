@@ -3,6 +3,7 @@
 @endpush
 @extends('layouts.backend.app')
 @section('content')
+
 <div class="page-header">
 	<h4 class="page-title">User Management</h4>
 </div>
@@ -106,7 +107,7 @@
 	<script src="https://cdn.datatables.net/1.10.22/js/dataTables.bootstrap4.min.js"></script>
 	<script>
 		$(document).ready(function() {
-    $('#usersTable').DataTable();
-} );
+		    $('#usersTable').DataTable();
+		} );
 	</script>
 @endpush

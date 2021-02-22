@@ -13,7 +13,7 @@
 		</div>
 	</div>
 </div>
-	<div class="card question-answer-section">
+	<div class="card question-answer-section" oncopy="alert('Copying prohibited'); return false" oncut="return false" onpaste="return false">
 		<div class="card-body">
 			
 		@foreach($questions as $key => $question)

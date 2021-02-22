@@ -2142,7 +2142,7 @@ pre[class*=language-]:before {
     padding-right: 15px;
 }
 
-.pcoded-header .dropdown .dropdown-toggle:after {
+/*.pcoded-header .dropdown .dropdown-toggle:after {
     content: "\e842";
     font-family: 'feather';
     font-size: 15px;
@@ -2150,7 +2150,7 @@ pre[class*=language-]:before {
     position: absolute;
     top: 0;
     left: 12px;
-}
+}*/
 
 .pcoded-header .dropdown .dropdown-menu {
     position: absolute;
@@ -7202,6 +7202,7 @@ table.dataTable tbody > tr.selected td.select-checkbox:after, table.dataTable tb
 }
 
 .dropdown-toggle::after {
+    display: none;
     top: 3px;
     left: 8px;
     position: relative;

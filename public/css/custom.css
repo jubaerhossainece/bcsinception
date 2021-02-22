@@ -10,6 +10,36 @@
 a:hover{
     text-decoration: none;    
 }
+strong{
+    font-weight: 600;
+}
+h1, h2, h3, h4, h5{
+    font-weight: normal;
+}
+
+body{
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+}
+
+.card.question-answer-section{
+    user-select: none;
+    -moz-user-select: -moz-none;
+    -webkit-user-select: none;
+}
+
+/*header part design*/
+.pro-head-name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.drp-user .fas.fa-chevron-down {
+    font-size: 12px;
+}
 
 .fixed-button.active{
     display: none;
@@ -353,6 +383,7 @@ label.light {
 
 .question-answer-section p{
     color: #414246;
+    font-size: 17px;
 }
 
 
@@ -368,7 +399,7 @@ label.light {
 }
 
 .question strong{
-    font-size: 16px;
+    font-size: 20px;
     width: calc(100% - 40px);
     font-weight: 600;
     color: #323238;
@@ -426,7 +457,6 @@ label.light {
     font-weight: 400;
     padding: 10px;
     border-radius: 5px;
-    background-color: #a4c5ff;
 }
 
 .explanation strong{
@@ -697,10 +727,19 @@ label.light {
     .download-pdf .btn.btn-danger.float-right {
     float: left !important;
     margin-top: 12px;
+    margin: 0 auto;
     }
 
-    .pcoded-content{
-        padding: 10px 30px;
+    .exam-set{
+        padding: 0 20px;
+     }
+     
+     .pcoded-content{
+         padding: 0 !important;
+     }
+     
+     .pcoded-header .m-header .b-brand{
+         font-size: 29px;
      }
 
     .question-answer-section{
