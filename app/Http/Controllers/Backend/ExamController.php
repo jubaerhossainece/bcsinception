@@ -23,9 +23,9 @@ class ExamController extends Controller
     	$pdf = PDF::loadView('backend.exams.pdf', compact('questions', 'exam'));
 
     	return $pdf->download($exam->category.'.pdf');
-    	// return view('backend.exams.pdf', compact('questions', 'exam'));
-        //   $pdf = App::make('dompdf.wrapper');
-        // $pdf->loadHTML('backend.exams.pdf', compact('questions', 'exam')); 
-        // return $pdf->stream(); 
+    	return view('backend.exams.pdf', compact('questions', 'exam'));
+          $pdf = App::make('dompdf.wrapper');
+        $pdf->loadHTML('backend.exams.pdf', compact('questions', 'exam')); 
+        return $pdf->stream(); 
     }
 }
